@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      SR TUFF Glass - Premium Bent Glass in Yamunanagar | Best Glass
+      Manufacturer
+    </title>
+    <meta
+      name="description"
+      content="Leading bent glass manufacturer in Yamunanagar. SR TUFF Glass offers high-quality, curved glass solutions for architectural and design applications. Best prices, innovative designs, trusted quality."
+    />
+    <link rel="stylesheet" href="../style3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="srcipt2.js"></script>
+    <style>
+      :root {
+        --primary: #0a4d68;
+        --secondary: #088395;
+        --accent: #05bfdb;
+        --light: #00ffca;
+        --dark: #053b50;
+        --white: #ffffff;
+        --gray: #f2f2f2;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      body {
+        background-color: var(--white);
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--primary-blue);
+        text-decoration: none;
+      }
+
+      .product-hero {
+        height: 90vh;
+        position: relative; /* Added for absolute positioning of background */
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+        overflow: hidden; /* Important for the animation */
+      }
+
+      /* New background div for animation */
+      .hero-background {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+
+        background: url(https://assets.wfcdn.com/im/88094308/compr-r85/6980/69809880/aleyna-curved-clear-glass-coffee-table.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        clip-path: circle(5%);
+        opacity: 0;
+        z-index: 1;
+      }
+
+      /* Animation class */
+      .circle-reveal {
+        animation: revealCircle 2s ease-in-out forwards;
+      }
+
+      @keyframes revealCircle {
+        0% {
+          clip-path: circle(5%);
+          opacity: 0;
+        }
+        100% {
+          clip-path: circle(75%);
+          opacity: 1;
+        }
+      }
+      .hero-content {
+        max-width: 600px;
+        animation: fadeInUp 1s ease;
+        position: relative;
+        z-index: 2; /* Ensure content stays above the animated background */
+      }
+
+      .hero-content h1 {
+        font-weight: 900;
+        font-size: 3.2rem;
+        color: #fff;
+        margin-top: -100px;
+        margin-left: -90px;
+        line-height: 1.2;
+        font-family: "Signika", sans-serif;
+      }
+
+      .product-features {
+        padding: 5rem 10%;
+        background: var(--light-blue);
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .feature-card {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        transition: border-color 0.4s ease-in-out;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+        background: linear-gradient(135deg, #007bff, #00d4ff);
+        color: white;
+        transform: translateY(-10px);
+      }
+
+      .specs-section {
+        padding: 5rem 10%;
+        background: var(--white);
+      }
+
+      .specs-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+        background: var(--white);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .specs-table th,
+      .specs-table td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid #edf2f7;
+      }
+
+      .specs-table th {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .applications {
+        padding: 5rem 10%;
+        background: var(--light-blue);
+      }
+
+      .applications-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .application-card {
+        position: relative;
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .application-image {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.5s ease;
+      }
+
+      .application-card:hover .application-image {
+        transform: scale(1.1);
+      }
+
+      .application-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        color: var(--white);
+      }
+
+      .cta-section {
+        padding: 5rem 10%;
+        text-align: center;
+        background: var(--primary-blue);
+        color: var(--white);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--white);
+        color: var(--primary-blue);
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        margin-top: 2rem;
+        margin-left: 20px;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: var(--primary);
+        transition: all 0.3s;
+        z-index: -1;
+      }
+
+      .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        color: white;
+      }
+
+      .btn:hover::before {
+        width: 100%;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .product-hero {
+          padding: 0 5%;
+        }
+
+        .features-grid,
+        .applications-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .specs-table {
+          font-size: 0.9rem;
+        }
+      }
+
+      #page7 {
+        width: 100vw;
+        height: 90vh;
+        position: relative;
+      }
+
+      .footer {
+        background-color: #fff;
+        color: #333;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+      }
+
+      .footer-section {
+        width: 22%;
+        text-align: left;
+      }
+
+      .footer-section h3 {
+        color: #000;
+        margin-bottom: 15px;
+      }
+
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-section > p {
+        color: black;
+      }
+
+      .footer-section ul li a {
+        color: #333;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .footer-section ul li a:hover {
+        color: #007bff;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+      }
+
+      .social-links a {
+        color: #333;
+        margin: 0 10px;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      .social-links > a > img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .social-links a:hover {
+        color: #007bff;
+      }
+
+      .newsletter input {
+        padding: 8px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .newsletter button {
+        padding: 8px 12px;
+        background: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 5px;
+      }
+
+      .newsletter button:hover {
+        background: #0056b3;
+      }
+
+      .footer-logo {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+
+      .footer-logo img {
+        max-width: 130px;
+        height: auto;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-section {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+
+      .company-info h3 {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .company-info p {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 8px;
+      }
+
+      .company-info .tagline {
+        font-style: italic;
+        font-size: 15px;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .company-info strong {
+        font-weight: bold;
+        color: #000;
+      }
+
+      .phone-numbers a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .phone-numbers a:hover {
+        text-decoration: underline;
+        color: #0056b3;
+      }
+
+      .company-info a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+      }
+
+      .company-info a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav id="cssmenu">
+        <div id="head-mobile"></div>
+        <div class="button"></div>
+        <ul>
+          <li class="active"><a href="/">HOME</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li>
+            <a>PRODUCTS</a>
+            <ul>
+              <li><a href="/tempered-glass/">Tempered Glass</a></li>
+              <li><a href="/insulated-glass/">Insulated Glass</a></li>
+              <li><a href="/security-glass/">Security Glass</a></li>
+              <li><a href="/fabric-glass/">Fabric Glass</a></li>
+              <li><a href="/bent-glass/">Bent Glass</a></li>
+              <li><a href="/decorative-glass/">Decorative Glass</a></li>
+            </ul>
+          </li>
+          <li><a href="/gallery">GALLERY</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="product-hero">
+      <div class="hero-background"></div>
+      <div class="hero-content">
+        <h1>Premium Bent Glass</h1>
+        <p
+          style="
+            color: #fff;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-left: 25px;
+            font-size: 1.2rem;
+            width: 650px;
+            height: 100%;
+          "
+        >
+          Yamunanagar's leading manufacturer of precision-curved Bent glass.
+          Transforming architectural visions with innovative glass solutions.
+        </p>
+        <a href="#contact" class="btn"
+          >Get a Quote <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+    </section>
+
+    <section class="product-features">
+      <h2>Why Choose Our Bent Glass?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Architectural Versatility</h3>
+          <p>
+            Highly customizable curvature and shape, allowing for innovative
+            architectural designs and unique aesthetic statements.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Premium Quality</h3>
+          <p>
+            Precision bending with superior clarity, uniform curves, and minimal
+            optical distortion for flawless results.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Structural Integrity</h3>
+          <p>
+            Engineered for durability with rigorous testing to ensure structural
+            integrity under various environmental conditions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="specs-section">
+      <h2>Technical Specifications</h2>
+      <table class="specs-table">
+        <tr>
+          <th>Property</th>
+          <th>Specification</th>
+        </tr>
+        <tr>
+          <td>Glass Thickness</td>
+          <td>4mm - 19mm</td>
+        </tr>
+        <tr>
+          <td>Minimum Bending Radius</td>
+          <td>300mm (varies by thickness)</td>
+        </tr>
+        <tr>
+          <td>Maximum Dimensions</td>
+          <td>2400mm x 3600mm</td>
+        </tr>
+        <tr>
+          <td>Glass Types Available</td>
+          <td>Clear, Tinted, Low-E, Laminated</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="applications">
+      <h2>Applications</h2>
+      <div class="applications-grid">
+        <div class="application-card">
+          <div
+            class="application-image"
+            style="
+              background-image: url('https://images.stockcake.com/public/e/5/f/e5f5bd3a-8920-465e-b2af-267d9867298e_large/curved-glass-building-stockcake.jpg');
+            "
+          ></div>
+          <div class="application-overlay">
+            <h3>Modern Facades</h3>
+          </div>
+        </div>
+        <div class="application-card">
+          <div
+            class="application-image"
+            style="
+              background-image: url('https://image.made-in-china.com/202f0j00HnYbhJLcwwqS/Luxury-Curved-Line-Jewelry-Display-Cabinet-Shopping-Mall-Glass-Showcase.webp');
+            "
+          ></div>
+          <div class="application-overlay">
+            <h3>Luxury Retail Displays</h3>
+          </div>
+        </div>
+        <div class="application-card">
+          <div
+            class="application-image"
+            style="
+              background-image: url('https://image.made-in-china.com/2f0j00zPMUWGunaDqc/Best-Price-Curved-Glass-Staircases-with-Bent-Glass-Railing-Glass-Spiral-Staircase.webp');
+            "
+          ></div>
+          <div class="application-overlay">
+            <h3>Curved Balustrades</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="page7">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Company Info -->
+          <div class="footer-logo">
+            <a href="#"
+              ><img
+                src="./imagefolder/SR_LOGO_1__page-0001-removebg-preview.png"
+                alt="SR Tuff Glass Logo"
+            /></a>
+          </div>
+          <div class="footer-section company-info">
+            <h3>SR Tuff Glass</h3>
+            <p class="tagline">
+              Delivering premium glass solutions with unmatched quality and
+              professional service.
+            </p>
+
+            <p>
+              <strong>Location:</strong><br />
+              SR TUFF GLASS PVT. LTD.<br />
+              KHARWAN ROAD, VILLAGE BHAGWANPUR, JAGADHARI, HARYANA<br />
+              <strong>GSTIN:</strong> 06ABICS0895H1Z1
+            </p>
+
+            <p>
+              <strong>Phone:</strong>
+              <span class="phone-numbers">
+                <a href="tel:7419719822">7419719822</a> |
+                <a href="tel:7419719824">7419719824</a>
+              </span>
+            </p>
+            <p>
+              <strong>Office-Phone:</strong>
+              <span class="phone-numbers">
+                <a href="tel:7419719821">7419719821</a> |
+                <a href="tel:9729560360">9729560360</a>
+              </span>
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:srtuffglass@gmail.com">srtuffglass@gmail.com</a>
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="">Products</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="./Contact.html">Contact Us</a></li>
+              <li><a href="#">Get a Quote</a></li>
+            </ul>
+          </div>
+
+          <!-- Our Products -->
+          <div class="footer-section our-products">
+            <h3>Our Products</h3>
+            <ul>
+              <li><a href="./Tempered glass.html">Tempered Glass</a></li>
+              <li><a href="./Fabric glass.html">Fabric Glass</a></li>
+              <li><a href="./Insulated glass.html">Insulated Glass</a></li>
+              <li><a href="./Security glass.html">Security Glass</a></li>
+              <li><a href="./Bent.html">Bent Glass</a></li>
+              <li><a href="./Decorative.html">Decorative Glass</a></li>
+            </ul>
+          </div>
+
+          <!-- Support & Policies -->
+          <div class="footer-section support">
+            <h3>Customer Support</h3>
+            <ul>
+              <li><a href="./Contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Social Media & Copyright -->
+        <div class="footer-bottom">
+          <div class="social-links">
+            <a href="#"
+              ><img src="./imagefolder/icons8-facebook-logo-48.png"
+            /></a>
+            <a href="#"
+              ><img src="./imagefolder/icons8-instagram-logo-64.png"
+            /></a>
+            <a href=""
+              ><img src="./imagefolder/icons8-linkedin-circled-48.png"
+            /></a>
+          </div>
+          <p>&copy; 1999 - 2025 SR Tuff Glass. All Rights Reserved.</p>
+          <p>
+            Use of this site is subject to express terms of use. By using this
+            site, you signify that you agree to be bound by these
+            <a href="#">Universal Terms of Service</a>.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.style.backgroundColor = "rgba(255, 255, 255, 0.98)";
+          navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)";
+        } else {
+          navbar.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
+          navbar.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+        }
+      });
+
+      // Animation for feature cards on scroll
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".feature-card").forEach((card) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        card.style.transition = "all 0.5s ease";
+        observer.observe(card);
+      });
+    </script>
+  </body>
+</html>
+Made with Artifacts are user-generated and may contain unverified or potentially
+unsafe content. Report Remix Artifact

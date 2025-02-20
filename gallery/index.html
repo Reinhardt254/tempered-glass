@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SR Tuff Glass - Gallery Coming Soon</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #1a365d, #2c5282);
+        color: white;
+      }
+
+      nav {
+        position: relative;
+        width: 980px;
+        margin: 0 auto;
+      }
+
+      #cssmenu,
+      #cssmenu ul,
+      #cssmenu ul li,
+      #cssmenu ul li a,
+      #cssmenu #head-mobile {
+        border: 0;
+        list-style: none;
+        line-height: 1;
+        display: block;
+        position: relative;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      #cssmenu:after,
+      #cssmenu > ul:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+      }
+
+      #cssmenu #head-mobile {
+        display: none;
+      }
+
+      #cssmenu {
+        font-family: sans-serif;
+        background: #333;
+      }
+
+      #cssmenu > ul > li {
+        float: left;
+      }
+
+      #cssmenu > ul > li > a {
+        padding: 17px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        color: #ddd;
+        font-weight: 700;
+      }
+
+      #cssmenu > ul > li:hover > a,
+      #cssmenu ul li a {
+        color: #fff;
+      }
+
+      #cssmenu > ul > li:hover,
+      #cssmenu ul li.active:hover,
+      #cssmenu ul li.active,
+      #cssmenu ul li.has-sub.active:hover {
+        -webkit-transition: background 0.3s ease;
+        -ms-transition: background 0.3s ease;
+        transition: background 0.3s ease;
+      }
+      #cssmenu ul li:hover {
+        background-color: #448d00;
+      }
+
+      #cssmenu > ul > li.has-sub > a {
+        padding-right: 30px;
+      }
+
+      #cssmenu > ul > li.has-sub > a:after {
+        position: absolute;
+        top: 22px;
+        right: 11px;
+        width: 8px;
+        height: 2px;
+        display: block;
+        background: #ddd;
+        content: "";
+      }
+
+      #cssmenu > ul > li.has-sub > a:before {
+        position: absolute;
+        top: 19px;
+        right: 14px;
+        display: block;
+        width: 2px;
+        height: 8px;
+        background: #ddd;
+        content: "";
+        -webkit-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+      }
+
+      #cssmenu > ul > li.has-sub:hover > a:before {
+        top: 23px;
+        height: 0;
+      }
+
+      #cssmenu ul ul {
+        position: absolute;
+        display: none;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        background: #333;
+      }
+
+      #cssmenu ul li:hover > ul {
+        display: block;
+        /* Show submenu on hover */
+      }
+
+      #cssmenu ul ul li {
+        height: 0;
+        -webkit-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        background: #333;
+        transition: all 0.25s ease;
+      }
+
+      #cssmenu ul ul li:hover {
+      }
+
+      #cssmenu li:hover > ul {
+        left: auto;
+      }
+
+      #cssmenu li:hover > ul > li {
+        height: 35px;
+      }
+
+      #cssmenu ul ul ul {
+        margin-left: 100%;
+        top: 0;
+      }
+
+      #cssmenu ul ul li a {
+        border-bottom: 1px solid rgba(150, 150, 150, 0.15);
+        padding: 11px 15px;
+        width: 170px;
+        font-size: 12px;
+        text-decoration: none;
+        color: #ddd;
+        font-weight: 400;
+      }
+
+      #cssmenu ul ul li:last-child > a,
+      #cssmenu ul ul li.last-item > a {
+        border-bottom: 0;
+      }
+
+      #cssmenu ul ul li:hover > a,
+      #cssmenu ul ul li a:hover {
+        color: #fff;
+      }
+
+      #cssmenu ul ul li.has-sub > a:after {
+        position: absolute;
+        top: 16px;
+        right: 11px;
+        width: 8px;
+        height: 2px;
+        display: block;
+        background: #ddd;
+        content: "";
+      }
+
+      #cssmenu ul ul li.has-sub > a:before {
+        position: absolute;
+        top: 13px;
+        right: 14px;
+        display: block;
+        width: 2px;
+        height: 8px;
+        background: #ddd;
+        content: "";
+        -webkit-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+      }
+
+      #cssmenu ul ul > li.has-sub:hover > a:before {
+        top: 17px;
+        height: 0;
+      }
+
+      #cssmenu ul ul li.has-sub:hover,
+      #cssmenu ul li.has-sub ul li.has-sub ul li:hover {
+        background: #363636;
+      }
+
+      #cssmenu ul ul ul li.active a {
+        border-left: 1px solid #333;
+      }
+
+      #cssmenu > ul > li.has-sub > ul > li.active > a,
+      #cssmenu > ul ul > li.has-sub > ul > li.active > a {
+        border-top: 1px solid #333;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .logo {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 46px;
+          text-align: center;
+          padding: 10px 0 0 0;
+          float: none;
+        }
+
+        .logo2 {
+          display: none;
+        }
+
+        nav {
+          width: 100%;
+        }
+
+        #cssmenu {
+          width: 100%;
+        }
+
+        #cssmenu ul {
+          width: 100%;
+          display: none;
+        }
+
+        #cssmenu ul li {
+          width: 100%;
+          border-top: 1px solid #444;
+        }
+
+        #cssmenu ul li:hover {
+          background: #363636;
+        }
+
+        #cssmenu ul ul li,
+        #cssmenu li:hover > ul > li {
+          height: auto;
+        }
+
+        #cssmenu ul li a,
+        #cssmenu ul ul li a {
+          width: 100%;
+          border-bottom: 0;
+        }
+
+        #cssmenu > ul > li {
+          float: none;
+        }
+
+        #cssmenu ul ul li a {
+          padding-left: 25px;
+        }
+
+        #cssmenu ul ul li {
+          background: #333 !important;
+        }
+
+        #cssmenu ul ul li:hover {
+          background: #363636 !important;
+        }
+
+        #cssmenu ul ul ul li a {
+          padding-left: 35px;
+        }
+
+        #cssmenu ul ul li a {
+          color: #ddd;
+          background: none;
+        }
+
+        #cssmenu ul ul li:hover > a,
+        #cssmenu ul ul li.active > a {
+          color: #fff;
+        }
+
+        #cssmenu ul ul,
+        #cssmenu ul ul ul {
+          position: relative;
+          left: 0;
+          width: 100%;
+          margin: 0;
+          text-align: left;
+        }
+
+        #cssmenu > ul > li.has-sub > a:after,
+        #cssmenu > ul > li.has-sub > a:before,
+        #cssmenu ul ul > li.has-sub > a:after,
+        #cssmenu ul ul > li.has-sub > a:before {
+          display: none;
+        }
+
+        #cssmenu #head-mobile {
+          display: block;
+          padding: 23px;
+          color: #ddd;
+          font-size: 12px;
+          font-weight: 700;
+        }
+      }
+
+      /* Main Content Styles */
+      .container {
+        max-width: 1200px;
+        width: 90%;
+        margin: 2rem auto;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+      }
+
+      .container:hover {
+        transform: translateY(-10px);
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .animation-container {
+        height: 300px;
+        position: relative;
+        perspective: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+
+      .cube {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotate 10s infinite linear;
+      }
+
+      .cube:hover {
+        animation-play-state: paused;
+      }
+
+      .face {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border: 4px solid rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        backface-visibility: visible;
+      }
+
+      .front {
+        transform: translateZ(75px);
+      }
+      .back {
+        transform: translateZ(-75px) rotateY(180deg);
+      }
+      .right {
+        transform: rotateY(90deg) translateZ(75px);
+      }
+      .left {
+        transform: rotateY(-90deg) translateZ(75px);
+      }
+      .top {
+        transform: rotateX(90deg) translateZ(75px);
+      }
+      .bottom {
+        transform: rotateX(-90deg) translateZ(75px);
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotateX(0) rotateY(0);
+        }
+        to {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
+      }
+
+      .description {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-card h3 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .feature-card p {
+        opacity: 0.9;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 768px) {
+        #cssmenu {
+          padding: 0 10px;
+        }
+
+        #cssmenu > ul > li > a {
+          padding: 15px 15px;
+        }
+
+        .container {
+          padding: 1rem;
+          width: 95%;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .animation-container {
+          height: 200px;
+        }
+
+        .cube {
+          width: 100px;
+          height: 100px;
+        }
+
+        .face {
+          width: 100px;
+          height: 100px;
+        }
+
+        .front {
+          transform: translateZ(50px);
+        }
+        .back {
+          transform: translateZ(-50px) rotateY(180deg);
+        }
+        .right {
+          transform: rotateY(90deg) translateZ(50px);
+        }
+        .left {
+          transform: rotateY(-90deg) translateZ(50px);
+        }
+        .top {
+          transform: rotateX(90deg) translateZ(50px);
+        }
+        .bottom {
+          transform: rotateX(-90deg) translateZ(50px);
+        }
+      }
+
+      #page7 {
+        width: 100vw;
+        height: 90vh;
+        position: relative;
+      }
+      .footer {
+        background-color: #fff;
+        color: #333;
+        padding: 40px 0;
+        text-align: center;
+      }
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+      }
+      .footer-section {
+        width: 22%;
+        text-align: left;
+      }
+      .footer-section h3 {
+        color: #000;
+        margin-bottom: 15px;
+      }
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-section > p {
+        color: black;
+      }
+      .footer-section ul li a {
+        color: #333;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-section ul li a:hover {
+        color: #007bff;
+      }
+      .footer-section ul li {
+        margin-bottom: 10px; /* Space between items */
+      }
+      .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+        padding-top: 20px;
+      }
+
+      .social-links a {
+        color: #333;
+        margin: 0 10px;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+      .social-links > a > img {
+        width: 50px;
+        height: 50px;
+      }
+      .social-links a:hover {
+        color: #007bff;
+      }
+      .newsletter input {
+        padding: 8px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .newsletter button {
+        padding: 8px 12px;
+        background: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 5px;
+      }
+      .newsletter button:hover {
+        background: #0056b3;
+      }
+      .footer-logo {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+      .footer-logo img {
+        max-width: 130px; /* Adjust size as needed */
+        height: auto;
+      }
+
+      @media (max-width: 768px) {
+        .footer-container {
+          flex-direction: column;
+          text-align: center;
+        }
+        .footer-section {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+
+      .company-info h3 {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .company-info p {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 8px;
+      }
+
+      .company-info .tagline {
+        font-style: italic;
+        font-size: 15px;
+        color: #555;
+        margin-bottom: 15px;
+      }
+
+      .company-info strong {
+        font-weight: bold;
+        color: #000;
+      }
+
+      .phone-numbers a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      .phone-numbers a:hover {
+        text-decoration: underline;
+        color: #0056b3;
+      }
+
+      .company-info a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+      }
+
+      .company-info a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="cssmenu">
+        <div id="head-mobile"></div>
+        <div class="button"></div>
+        <ul>
+          <li class="active"><a href="/">HOME</a></li>
+          <li><a href="/about">ABOUT</a></li>
+          <li>
+            <a>PRODUCTS</a>
+            <ul>
+              <li><a href="/tempered-glass/">Tempered Glass</a></li>
+              <li><a href="/insulated-glass/">Insulated Glass</a></li>
+              <li><a href="/security-glass/">Security Glass</a></li>
+              <li><a href="/fabric-glass/">Fabric Glass</a></li>
+              <li><a href="/bent-glass/">Bent Glass</a></li>
+              <li><a href="/decorative-glass/">Decorative Glass</a></li>
+            </ul>
+          </li>
+          <li><a href="/gallery">GALLERY</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>SR Tuff Glass Gallery</h1>
+
+      <div class="animation-container">
+        <div class="cube">
+          <div class="face front"></div>
+          <div class="face back"></div>
+          <div class="face right"></div>
+          <div class="face left"></div>
+          <div class="face top"></div>
+          <div class="face bottom"></div>
+        </div>
+      </div>
+
+      <p class="description">
+        Our gallery is coming soon! We're preparing to showcase our finest glass
+        works and installations. Stay tuned to explore our exceptional
+        collection of custom glass solutions.
+      </p>
+
+      <div class="features">
+        <div class="feature-card">
+          <h3>Premium Collections</h3>
+          <p>
+            Explore our exclusive range of toughened glass solutions, crafted
+            with precision and excellence.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Custom Projects</h3>
+          <p>
+            View our bespoke installations and custom designs, tailored to meet
+            unique architectural needs.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Latest Works</h3>
+          <p>
+            Stay tuned for our most recent projects and innovations in glass
+            manufacturing and installation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="page7">
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- Company Info -->
+          <div class="footer-logo">
+            <a href="#"
+              ><img
+                src="./imagefolder/SR_LOGO_1__page-0001-removebg-preview.png"
+                alt="SR Tuff Glass Logo"
+            /></a>
+          </div>
+          <div class="footer-section company-info">
+            <h3>SR Tuff Glass</h3>
+            <p class="tagline">
+              Delivering premium glass solutions with unmatched quality and
+              professional service.
+            </p>
+
+            <p>
+              <strong>Location:</strong><br />
+              SR TUFF GLASS PVT. LTD.<br />
+              KHARWAN ROAD, VILLAGE BHAGWANPUR, JAGADHARI, HARYANA<br />
+              <strong>GSTIN:</strong> 06ABICS0895H1Z1
+            </p>
+
+            <p>
+              <strong>Phone:</strong>
+              <span class="phone-numbers">
+                <a href="tel:7419719822">7419719822</a> |
+                <a href="tel:7419719824">7419719824</a>
+              </span>
+            </p>
+            <p>
+              <strong>Office-Phone:</strong>
+              <span class="phone-numbers">
+                <a href="tel:7419719821">7419719821</a> |
+                <a href="tel:9729560360">9729560360</a>
+              </span>
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:srtuffglass@gmail.com">srtuffglass@gmail.com</a>
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="">Products</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="./Contact.html">Contact Us</a></li>
+              <li><a href="#">Get a Quote</a></li>
+            </ul>
+          </div>
+
+          <!-- Our Products -->
+          <div class="footer-section our-products">
+            <h3>Our Products</h3>
+            <ul>
+              <li><a href="./Tempered glass.html">Tempered Glass</a></li>
+              <li><a href="./Fabric glass.html">Fabric Glass</a></li>
+              <li><a href="./Insulated glass.html">Insulated Glass</a></li>
+              <li><a href="./Security glass.html">Security Glass</a></li>
+              <li><a href="./Bent.html">Bent Glass</a></li>
+              <li><a href="./Decorative.html">Decorative Glass</a></li>
+            </ul>
+          </div>
+
+          <!-- Support & Policies -->
+          <div class="footer-section support">
+            <h3>Customer Support</h3>
+            <ul>
+              <li><a href="./Contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Social Media & Copyright -->
+        <div class="footer-bottom">
+          <div class="social-links">
+            <a href="#"
+              ><img src="./imagefolder/icons8-facebook-logo-48.png"
+            /></a>
+            <a href="#"
+              ><img src="./imagefolder/icons8-instagram-logo-64.png"
+            /></a>
+
+            <a href=""
+              ><img src="./imagefolder/icons8-linkedin-circled-48.png"
+            /></a>
+          </div>
+          <p>&copy; 1999 - 2025 SR Tuff Glass. All Rights Reserved.</p>
+          <p>
+            Use of this site is subject to express terms of use. By using this
+            site, you signify that you agree to be bound by these
+            <a href="#">Universal Terms of Service</a>.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const cube = document.querySelector(".cube");
+      const container = document.querySelector(".animation-container");
+
+      container.addEventListener("mousemove", (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        cube.style.transform = `
+                rotateY(${x / 10}deg)
+                rotateX(${-y / 10}deg)
+            `;
+      });
+
+      container.addEventListener("mouseleave", () => {
+        cube.style.transform = "";
+      });
+    </script>
+  </body>
+</html>
