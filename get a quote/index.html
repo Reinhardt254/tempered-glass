@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<style>
+        .scene {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .container {
+            width: 450px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 
+                0 25px 45px rgba(0, 0, 0, 0.2),
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
+            transform-style: preserve-3d;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .layer-1 {
+            transform: translateZ(-50px);
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 700;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateZ(50px);
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #fff, transparent);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1em;
+            font-weight: 500;
+            transform: translateZ(40px);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1em;
+            transition: all 0.4s ease;
+            transform: translateZ(30px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+            transform: translateZ(40px);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transform: translateZ(40px);
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        button:hover {
+            transform: translateZ(50px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        button:hover::before {
+            left: 100%;
+        }
+
+        .success-message {
+            display: none;
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: 600;
+            transform: translateZ(40px);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Floating elements background */
+        .floating-bg {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: particleFloat 15s infinite linear;
+        }
+
+        @keyframes particleFloat {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-100vh) rotate(360deg); }
+        }
+</style>
+<body>
+    <header>
+        <nav id='cssmenu'>
+            <div id="head-mobile"></div>
+            <div class="button"></div>
+            <ul>
+                <li class='active'><a href='./index.html'>HOME</a></li>
+                <li><a href='./about.html'>ABOUT</a></li>
+                <li><a href='#'>PRODUCTS</a>
+                    <ul>
+                        <li><a href="./Tempered glass.html">Tempered Glass</a></li>
+                        <li><a href="./Fabric glass.html">Fabric Glass</a></li>
+                        <li><a href="./Insulated glass.html">Insulated Glass</a></li>
+                        <li><a href="./Security glass.html">Security Glass</a></li>
+                        <li><a href="./Bent.html">Bent Glass</a></li>
+                        <li><a href="./Decorative.html">Decorative Glass</a></li>
+                    </ul>
+                </li>
+                <li><a href='#'>GALLERY</a></li>
+                <li><a href='./Contact.html'>CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="floating-bg">
+        <!-- Particles will be added by JavaScript -->
+    </div>
+    
+    <div class="scene">
+        <div class="container" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+            <div class="layer layer-1"></div>
+            <h1>Get a Quote</h1>
+            <form id="quoteForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Type</label>
+                    <select id="service" required>
+                        <option value="">Select a service</option>
+                        <option value="web">Web Development</option>
+                        <option value="mobile">Mobile App Development</option>
+                        <option value="design">UI/UX Design</option>
+                        <option value="consulting">Consulting</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Project Details</label>
+                    <textarea id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Request Quote</button>
+            </form>
+            <div id="successMessage" class="success-message">
+                Thank you! We'll get back to you with a quote soon.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
