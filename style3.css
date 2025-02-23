@@ -9,12 +9,16 @@ body {
   height: 100%;
   width: 100%;
 }
+ 
+p{
+  font-size: 1rem;
+}
 
 #main {
   position: relative;
   overflow: hidden;
   background-color: white;
-}
+} 
 
 #page1 {
   height: 100vh;
@@ -78,7 +82,7 @@ body {
   /* Ensure the image covers the container without distortion */
   z-index: 1;
 }
-
+ 
 * {
   margin: 0;
   padding: 0;
@@ -89,6 +93,8 @@ header {
   position: relative;
   width: 100%;
   background: #333;
+
+  padding: 0.5rem 0;
 }
 
 .logo {
@@ -115,6 +121,7 @@ nav {
   position: relative;
   width: 980px;
   margin: 0 auto;
+  padding-top: 1rem;
 }
 
 #cssmenu,
@@ -335,6 +342,8 @@ nav {
 
   nav {
     width: 100%;
+    height: auto;
+    padding: 0;
   }
 
   #cssmenu {
@@ -344,6 +353,7 @@ nav {
   #cssmenu ul {
     width: 100%;
     display: none;
+    margin-top: 0;
   }
 
   #cssmenu ul li {
@@ -450,7 +460,7 @@ nav {
     top: 16px;
     right: 20px;
     display: block;
-    height: 2px; 
+    height: 2px;
     width: 20px;
     background: #ddd;
     content: "";
@@ -556,9 +566,12 @@ nav {
 
 #page2 {
   width: 100vw;
-  height: 140vh;
+  height: auto;
   position: relative;
   background-color: white;
+  box-sizing: border-box;
+
+  margin-bottom: 100px;
 }
 
 #page2 > h1 {
@@ -567,6 +580,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   padding: 20px 10px;
+  padding-top: 50px;
   font-weight: 900;
   color: rgb(4, 57, 78);
 }
@@ -598,12 +612,16 @@ nav {
   background-repeat: no-repeat;
 }
 
+.overlay{
+  padding-bottom: 1rem;
+}
+
 .overlay > h2 {
   color: black;
   font-size: 30px;
   font-weight: 800;
   margin-top: 250px;
-  margin-left: 40px;
+  margin-left: 10px;
   text-transform: uppercase;
 
   white-space: nowrap;
@@ -620,8 +638,8 @@ nav {
   border: none;
   background-color: rgb(208, 24, 24);
   color: #fff;
-  margin-top: 30px;
-  margin-left: 50px;
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 #card2 {
@@ -663,10 +681,12 @@ nav {
 
 #page3 {
   width: 100vw;
-  height: 120vh;
+  height: auto;
   max-height: auto;
   position: relative;
   background-color: white;
+
+  padding-bottom: 10vw;
 }
 
 #page3 > h1 {
@@ -704,31 +724,42 @@ nav {
   margin-top: 70px;
   margin-left: 70px;
   transition: all ease 0.6s;
+
+  display: flex;
+  justify-content: center;
 }
 #card7 {
   background-image: url("https://www.andacademy.com/resources/wp-content/uploads/2024/03/1-15.webp");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  height: 400px;
 }
 
 #card8 {
   background-image: url("https://d1di04ifehjy6m.cloudfront.net/media/filer_public/67/ca/67cac7fa-1853-4f1d-95ed-db1ed6b38ec5/adobestock_212026013_2.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  height: 400px;
 }
 #card9 {
   background-image: url("https://www.apisglass.com/wp-content/uploads/2022/07/Apis-tempered-Shower-glass-panel-factory.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  height: 400px;
 }
+
 .cardss {
   width: 300px;
   height: 100px;
   background-color: whitesmoke;
-  margin-left: 40px;
-  margin-top: 300px;
+
+  margin-top: 350px;
   position: absolute;
 }
+
 .overlay1 > h2 {
   color: black;
   font-size: 30px;
@@ -778,9 +809,11 @@ nav {
 }
 #page4 {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   position: relative;
   background-color: white;
+
+  padding-bottom: 10vw;
 }
 
 #page4 > h1 {
@@ -806,7 +839,7 @@ nav {
 }
 
 .container {
-  height: 60vh;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 70px;
@@ -825,6 +858,7 @@ nav {
   margin-left: 70px;
   transition: all ease 0.6s;
   border-radius: 10px;
+  padding-bottom: 5rem;
 }
 
 .cardsss > h2 {
@@ -880,9 +914,11 @@ nav {
 
 #page5 {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   position: relative;
   background-color: white;
+
+  padding-bottom: 5rem;
 }
 
 #page5 > h1 {
@@ -909,22 +945,29 @@ nav {
 }
 
 .container1 {
-  height: 60vh;
+  height: auto;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 70px;
   position: relative;
   z-index: 10;
 }
 
+.container1 .content{
+  width: 27vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .cardssss {
   height: 55%;
-  width: 25%;
+  width: 100%;
   overflow: hidden; /* Ensure overflow is hidden */
   background-color: whitesmoke;
   background-size: cover;
-  margin-top: 70px;
-  margin-left: 70px;
   transition: all ease 0.6s;
   position: relative; /* Ensure positioning for absolute children */
 }
@@ -933,70 +976,72 @@ nav {
   background-image: url(https://lirp.cdn-website.com/758c5dcc/dms3rep/multi/opt/shutterstock_515908972-640w.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
 }
+
 #card11 {
-  background-image: url(https://blog.gaaptuff.com/wp-content/uploads/2024/08/toughened-glass-in-commercial-and-residential-buildings-1.jpg);
+  background-image: url(https://czy.b1b.myftpupload.com/wp-content/uploads/2025/02/istockphoto-1297551260-1024x1024-1.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
 }
+ 
 #card12 {
   background-image: url(https://constructionbusinesstoday.com/wp-content/uploads/2024/02/Sapphire-Tuff.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
 }
+
 .text1 {
-  position: absolute;
   z-index: 10;
 
   font-size: 2vw;
   flex-direction: column;
-  margin-top: 330px;
-  margin-left: 100px;
-  font-weight: 900;
 }
+
+.container1 h1{
+  width: 100%;
+  text-align: start;
+
+  padding: 0.5rem 0;
+}
+
+.container1 p{
+  width: 100%;
+  text-align: start;
+}
+
+
+
 .text2 {
   flex-direction: column;
-  position: absolute;
-  margin-top: 370px;
-  width: 450px;
-  height: 150%;
-  margin-left: 50px;
 }
-.text3 {
-  position: absolute;
-  z-index: 10;
 
+.text3 {
   font-size: 2vw;
-  flex-direction: column;
-  margin-top: 330px;
-  margin-left: 600px;
   font-weight: 900;
 }
 .text4 {
   flex-direction: column;
-  position: absolute;
-  margin-top: 370px;
-  width: 450px;
-  height: 150%;
-  margin-left: 600px;
 }
 .text5 {
-  position: absolute;
-  z-index: 10;
-
   font-size: 2vw;
   flex-direction: column;
-  margin-top: 330px;
-  margin-left: 1100px;
+
   font-weight: 900;
 }
 .text6 {
-  flex-direction: column;
-  position: absolute;
-  margin-top: 370px;
-  width: 350px;
-  height: 150%;
-  margin-left: 1100px;
+
 }
 .text1:hover {
   color: #0096ff;
@@ -1008,6 +1053,8 @@ nav {
 .text5:hover {
   color: #0096ff;
 }
+
+
 #card10:hover {
   transform: scale(1.2);
 }
@@ -1023,6 +1070,7 @@ nav {
   position: relative;
   background-color: #333;
 }
+
 #page6 > h1 {
   display: flex;
   align-items: center;
@@ -1044,6 +1092,7 @@ nav {
   font-size: 3vw;
   font-weight: 900;
 }
+
 .container2 {
   height: 60vh;
   display: flex;
@@ -1052,6 +1101,7 @@ nav {
   position: relative;
   z-index: 10;
 }
+
 .cardsssss {
   height: 80%;
   width: 40%;
@@ -1553,16 +1603,16 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
-  #bottom-page1{
+  #bottom-page1 {
     background-color: red;
   }
 
-  #bottom-page1-inner{
+  #bottom-page1-inner {
     margin: 0;
     transform: unset;
   }
 
-  #bottom-page1-inner h1{
+  #bottom-page1-inner h1 {
     font-size: 3rem;
     width: 98%;
 
@@ -1586,12 +1636,12 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+ 
     padding: 0;
     margin: 0;
 
     height: auto;
-  }
+  } 
 
   .container1 {
     display: flex;
@@ -1605,8 +1655,32 @@ h1 {
     height: auto;
   }
 
+  #page5 > h2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+    font-weight: 900;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 900;
+    width: 100vw;
+  }
 
-  .cardsss{
+  .container1 h1{
+    width: 100%;
+    text-align: start;
+    font-size: 2rem;
+    width: 99vw;
+  }
+  
+  .container1 p{
+    width: 99vw;
+    text-align: start;
+  }
+
+  .cardsss {
     width: 90vw;
     margin: 0;
 
@@ -1664,7 +1738,74 @@ h1 {
     margin: 0 !important;
   }
 
-  .overlay1{
+  .overlay1 {
     width: 90%;
+  }
+
+  #page2 {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    background-color: white;
+    box-sizing: border-box;
+
+    margin-bottom: 100px;
+  }
+
+  #page2 > h1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+    padding-top: 50px;
+    font-weight: 900;
+    color: rgb(4, 57, 78);
+  }
+
+  #page10 {
+    width: 100vw;
+    height: auto;
+    position: relative;
+  }
+
+  #page6 {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    background-color: #333;
+  }
+
+  .container2 {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+  }
+
+  #card10 {
+    width: 100vw;
+    height: 300px;
+
+    object-fit: cover;
+    margin: 0;
+  }
+ 
+  #card11 {
+    width: 100vw;
+    height: 300px;
+
+    object-fit: cover;
+    margin: 0;
+  }
+
+  #card12 {
+    width: 100vw;
+    height: 300px;
+
+    object-fit: cover;
+    margin: 0;
   }
 }
