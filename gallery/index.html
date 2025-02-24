@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SR Tuff Glass - Gallery Coming Soon</title>
+    <link rel="stylesheet" href="../style3.css" />
     <style>
       * {
         margin: 0;
@@ -663,8 +664,8 @@
     <header>
       <nav id="cssmenu">
         <div id="head-mobile"></div>
-        <div class="button"></div>
-        <ul>
+        <div class="button" onclick="toggleNav()"></div>
+        <ul id="nav-menu">
           <li class="active"><a href="/">HOME</a></li>
           <li><a href="/about">ABOUT</a></li>
           <li>
@@ -682,8 +683,18 @@
           <li><a href="/contact">CONTACT</a></li>
         </ul>
       </nav>
+      <script>
+        function toggleNav() {
+          const menu = document.getElementById("nav-menu");
+          if (menu.style.display === "none") {
+            menu.style.display = "block";
+          } else {
+            menu.style.display = "none";
+          }
+        } 
+      </script>
     </header>
-
+ 
     <div class="container">
       <h1>SR Tuff Glass Gallery</h1>
 

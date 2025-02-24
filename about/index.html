@@ -11,13 +11,13 @@
     <link rel="stylesheet" href="about.css" />
     <link rel="stylesheet" href="../style3.css" />
   </head>
- 
+   
   <body>
     <header>
       <nav id="cssmenu">
         <div id="head-mobile"></div>
-        <div class="button"></div>
-        <ul>
+        <div class="button" onclick="toggleNav()"></div>
+        <ul id="nav-menu">
           <li class="active"><a href="/">HOME</a></li>
           <li><a href="/about">ABOUT</a></li>
           <li>
@@ -35,6 +35,16 @@
           <li><a href="/contact">CONTACT</a></li>
         </ul>
       </nav>
+      <script>
+        function toggleNav() {
+          const menu = document.getElementById("nav-menu");
+          if (menu.style.display === "none") {
+            menu.style.display = "block";
+          } else {
+            menu.style.display = "none";
+          }
+        }
+      </script>
     </header>
 
     <div class="header">
@@ -177,7 +187,7 @@
           applications, SR Tuff Glass is your go-to destination for premium
           glass solutions.
         </p>
-        <a href="#contact" class="cta-button">Contact Us Today</a>
+        <a href="/contact" class="cta-button">Contact Us Today</a>
       </div>
     </div>
 

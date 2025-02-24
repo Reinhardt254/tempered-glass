@@ -7,7 +7,7 @@
       SR TUFF Glass - Premium Bent Glass in Yamunanagar | Best Glass
       Manufacturer
     </title>
-    <meta 
+    <meta
       name="description"
       content="Leading bent glass manufacturer in Yamunanagar. SR TUFF Glass offers high-quality, curved glass solutions for architectural and design applications. Best prices, innovative designs, trusted quality."
     />
@@ -68,7 +68,7 @@
         width: 100%;
         height: 100%;
 
-        background: url(https://assets.wfcdn.com/im/88094308/compr-r85/6980/69809880/aleyna-curved-clear-glass-coffee-table.jpg);
+        background: url("https://assets.wfcdn.com/im/88094308/compr-r85/6980/69809880/aleyna-curved-clear-glass-coffee-table.jpg") !important;
         background-size: 100% 100%;
         background-repeat: no-repeat;
         clip-path: circle(5%);
@@ -91,6 +91,7 @@
           opacity: 1;
         }
       }
+
       .hero-content {
         max-width: 600px;
         animation: fadeInUp 1s ease;
@@ -279,6 +280,10 @@
         }
       }
 
+      
+      @media (max-width: 768px) {
+      }
+
       #page7 {
         width: 100vw;
         height: 90vh;
@@ -447,8 +452,8 @@
     <header>
       <nav id="cssmenu">
         <div id="head-mobile"></div>
-        <div class="button"></div>
-        <ul>
+        <div class="button" onclick="toggleNav()"></div>
+        <ul id="nav-menu">
           <li class="active"><a href="/">HOME</a></li>
           <li><a href="/about">ABOUT</a></li>
           <li>
@@ -466,8 +471,18 @@
           <li><a href="/contact">CONTACT</a></li>
         </ul>
       </nav>
+      <script>
+        function toggleNav() {
+          const menu = document.getElementById("nav-menu");
+          if (menu.style.display === "none") {
+            menu.style.display = "block";
+          } else {
+            menu.style.display = "none";
+          }
+        }
+      </script>
     </header>
-
+ 
     <section class="product-hero">
       <div class="hero-background"></div>
       <div class="hero-content">
@@ -491,6 +506,70 @@
         ></a>
       </div>
     </section>
+
+    <style>
+      @media only screen and (max-width: 768px){      
+      /* New background div for animation */
+      .product-hero{
+        width: 100vw;
+        height: 60vh !important;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+      }
+
+      .hero-background {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+
+        background: url("https://assets.wfcdn.com/im/88094308/compr-r85/6980/69809880/aleyna-curved-clear-glass-coffee-table.jpg") !important;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        clip-path: circle(5%);
+        opacity: 0;
+        z-index: 1;
+      }
+
+      /* Animation class */
+      .circle-reveal {
+        animation: revealCircle 2s ease-in-out forwards;
+      }
+
+      .hero-content {
+        max-width: 100vw;
+        animation: fadeInUp 1s ease;
+        position: relative;
+        z-index: 2; /* Ensure content stays above the animated background */
+
+        padding: 0rem !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      .hero-content h1 {
+        font-weight: 900;
+        font-size: 3.2rem;
+        color: #fff;
+        margin-top: -0px;
+        margin-left: 0px;
+        line-height: 1.2;
+        font-family: "Signika", sans-serif;
+
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .hero-content p{
+        width: 100vw !important;
+        padding: 1rem !important;
+        margin: 0 !important;
+      }
+      }
+    </style>
 
     <section class="product-features">
       <h2>Why Choose Our Bent Glass?</h2>
@@ -583,7 +662,7 @@
         </div>
       </div>
     </section>
- 
+
     <script>
       // Navbar scroll effect
       window.addEventListener("scroll", function () {
@@ -618,7 +697,13 @@
         observer.observe(card);
       });
     </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const background = document.querySelector(".hero-background");
+        background.classList.add("circle-reveal");
+      });
+    </script>
   </body>
 </html>
-Made with Artifacts are user-generated and may contain unverified or potentially
-unsafe content. Report Remix Artifact
+  
