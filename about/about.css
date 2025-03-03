@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  width: auto;
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
 }
@@ -17,6 +18,7 @@ body {
   background: var(--light);
   color: var(--dark);
   line-height: 1.6;
+
   overflow-x: hidden;
 }
 
@@ -80,6 +82,7 @@ body {
   padding: 5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .intro-section {
@@ -108,7 +111,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-
+ 
 .vision-card::before {
   content: "";
   position: absolute;
@@ -183,6 +186,8 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+
+  box-sizing: border-box;
 }
 
 .product-card {
@@ -278,22 +283,32 @@ h2::after {
 }
 
 @media (max-width: 768px) {
+  .content-section {
+    padding: 5rem 2rem;
+    max-width: 100vw;
+    margin: 0;
+    box-sizing: border-box;
+  }  
 
   .header{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .header img{
-    padding-top: 3rem;
+    padding-top: 6rem;
     box-sizing: border-box;
   }
 
   .location-badge {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 5rem;
+    right: 0%;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 0.5rem 1.5rem;
@@ -302,6 +317,8 @@ h2::after {
     font-weight: bold;
     animation: fadeIn 1s ease 1s forwards;
     opacity: 0;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .glass-effect {
@@ -313,7 +330,9 @@ h2::after {
     transform: translateY(30px);
     opacity: 0;
     animation: slideUp 1s ease forwards;
-    max-width: 100vw;
+    max-width: 100vw !important;
+    overflow: hidden;
+    box-sizing: border-box !important;
 
     margin: 0;
   }

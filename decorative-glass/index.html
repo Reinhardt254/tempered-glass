@@ -429,7 +429,7 @@
           Yamunanagar's leading manufacturer of decorative fabric glass.
           Transforming spaces with elegant designs and superior craftsmanship..
         </p>
-        <a href="#contact" class="btn"
+        <a href="/get-a-quote"  class="btn"
           >Get a Quote <i class="fas fa-arrow-right"></i
         ></a>
       </div>
@@ -440,7 +440,7 @@
         /* New background div for animation */
         .product-hero {
           width: 100vw;
-          height: 60vh !important;
+          height: auto !important;
 
           margin: 0;
           padding: 0;
@@ -453,13 +453,14 @@
           inset: 0;
           width: 100%;
           height: 100%;
-
-          background: url(https://assets.wfcdn.com/im/88094308/compr-r85/6980/69809880/aleyna-curved-clear-glass-coffee-table.jpg);
+ 
+          /*background: url(https://assets.wfcdn.com/im/88094308/compr-r85/6980/69809880/aleyna-curved-clear-glass-coffee-table.jpg);*/
           background-size: 100% 100%;
           background-repeat: no-repeat;
           clip-path: circle(5%);
           opacity: 0;
           z-index: 1;
+          filter: brightness(60%);
         }
 
         /* Animation class */
@@ -479,22 +480,30 @@
         }
 
         .hero-content h1 {
+          width: 90% !important;
           font-weight: 900;
           font-size: 3.2rem;
           color: #fff;
           margin-top: -0px;
-          margin-left: 0px;
+          margin-left: 0px !important;
           line-height: 1.2;
           font-family: "Signika", sans-serif;
+          box-sizing: border-box;
 
           padding: 0 !important;
           margin: 0 !important;
         }
-
+ 
         .hero-content p {
           width: 100vw !important;
           padding: 1rem !important;
           margin: 0 !important;
+          color: #fff !important;
+        }
+
+        .hero-content .btn{
+          margin-top: 0;
+          margin-bottom: 1rem;
         }
       }
     </style>
